@@ -1,0 +1,256 @@
+
+
+<div class="min-h-screen flex">
+    <app-sidebar-collapse></app-sidebar-collapse>
+
+<form [formGroup]="salesInvoice" class="flex-1 min-w-0 overflow-auto bg-indigo-50 px-2">
+      
+    <div class="mb-20 ">
+      <div class="bg-card p-4 w-full rounded-lg">
+        <nav class="flex" aria-label="Breadcrumb">
+            <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+                <li class="inline-flex items-center">
+                    <a href="#" class="inline-flex items-center text-3xl font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
+                        <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
+                        </svg>
+                        All
+                    </a>
+                </li>
+                <li>
+                    <div class="flex items-center">
+                        <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                        </svg>
+                        <a href="#" class="ms-1 text-3xl font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white">Sales</a>
+                    </div>
+                </li>
+                <li aria-current="page">
+                    <div class="flex items-center">
+                        <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                        </svg>
+                        <a href="#" class="ms-1 text-3xl font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white">Invoice</a>
+                    </div>
+                </li>
+            </ol>
+        </nav>
+
+   
+
+
+
+        <div style="display: flex; justify-content: flex-end;">
+          <button (click)="moveToManage()" class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded-full">
+            Move To Manage
+          </button>
+        </div>
+
+    </div>
+    </div>
+
+<!-- header -->
+
+<div >
+  <li class="flex-1 mr-2">
+    <a  class="mt-[-103px] block border  rounded py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white" href="#" style="background: #445760d9;">Invoice</a>
+  </li>
+</div>
+
+    
+    <div class="mt-15 mb-20 grid grid-cols-4 gap-x-8 gap-y-4 p-4" style="margin-top: -41px;">
+      <div>
+       
+<label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Invoice Type</label>
+<select id="countries" formControlName="invoice_type" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+  <option selected></option>
+  <option selected>Non GST</option>
+  <option value="US">GST</option>
+  <option value="CA">Bill Of Supply</option>
+  
+</select>
+</div>
+        <div>
+        <div>
+            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Invoice No</label>
+            <input formControlName="invoice_no" class="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 w-full p-2.5" type="text" id="first_name"  required>
+        </div>
+    </div>
+
+      <div>
+        <div>
+          <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Date</label>
+          <input formControlName="date" class="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 w-full p-2.5" type="date" id="first_name"  required>
+      </div>
+    </div>
+      <div>
+        <div>
+          <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Sold By</label>
+          <input formControlName="sold_by" class="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500  w-full p-2.5 " type="text" id="first_name"  required>
+        </div>
+        
+      </div>
+      <div>
+        <div>
+          <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Bill To</label>
+          <select  id="countries" formControlName="bill_to" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <option selected></option>
+            <option selected>Cash A/C</option>
+            <option value="US">Client A/C</option>
+          
+            
+          </select>
+        </div>
+
+ 
+        
+      </div>
+      <div>
+        <div>
+          <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mobile No</label>
+          <input formControlName="mobile_no" class="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 w-full p-2.5 " type="text" id="first_name"  required>
+        </div>
+        
+      </div>
+      <div>
+        <div>
+          <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Client Name</label>
+          <input formControlName="client_name" class="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 w-full p-2.5 " type="text" id="first_name"  required>
+        </div>
+        
+      </div>
+      <div>
+        <div>
+          <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Address</label>
+          <input formControlName="address" class="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 block w-full p-2.5 " type="text" id="first_name"  required>
+        </div>
+        
+      </div>
+      <div>
+        <div>
+          <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Place Of Supply</label>
+          <input formControlName="place_of_supply" class="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 block w-full p-2.5" type="text" id="first_name"  required>
+        </div>
+        
+      </div>
+      <div>
+        <div>
+          <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Client GSTin</label>
+          <input formControlName="client_gst" class="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 w-full p-2.5" type="text" id="first_name"  required>
+        </div>
+        
+      </div>
+     
+    </div>
+
+    
+<div >
+  <li class="flex-1 mr-2">
+    <a class="mt-[-97px] block border border-blue-500 rounded py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white" href="#"style="background: #445760d9;">Add Item</a>
+  </li>
+</div>
+<div>
+  <div  class="mt-15 mb-20 grid grid-cols-4 gap-x-8 gap-y-4 p-4" style="margin-top: -41px;">
+    <div>
+      <div>
+          <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Item Name</label>
+          <input formControlName="item_name" class="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 w-full p-2.5" type="text" id="first_name"  required>
+      </div>
+  </div>
+
+  <div>
+    <div>
+        <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">UoM</label>
+        <input formControlName="uom" class="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 w-full p-2.5" type="text" id="first_name"  required>
+    </div>
+</div>
+
+<div>
+  <div>
+      <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Quantity</label>
+      <input formControlName="quantity" class="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 w-full p-2.5" type="number" id="first_name"  required>
+  </div>
+</div>
+
+<div>
+  <div>
+      <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Sale Price</label>
+      <input formControlName="sale_price" class="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 w-full p-2.5" type="number" id="first_name"  required>
+  </div>
+</div>
+
+<div>
+  <div>
+      <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Discount</label>
+      <input formControlName="discount" class="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 w-full p-2.5" type="text" id="first_name"  required>
+  </div>
+</div>
+
+<div>
+  <div>
+      <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Amount</label>
+      <input formControlName="amount" class="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 w-full p-2.5" type="number" id="first_name"  required>
+  </div>
+</div>
+</div>
+</div>
+
+<div>
+
+<div >
+    <li class="flex-1 ">
+      <a class=" block border border-blue-500 rounded py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white" href="#"style="background: #445760d9;margin-top: -86px;">Primary Details</a>
+    </li>
+  </div>
+
+  <div >
+    
+      <div class="grid grid-cols-3 gap-x-8 gap-y-4 mt-2">
+
+        <div>
+       
+          <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Type</label>
+          <select formControlName="type" id="countries" formControlName="type" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <option selected></option>
+            <option selected>Details</option>
+            <option value="cash">Cash</option>
+            <option value="cheque">Cheque</option>
+            <option value="card">Card</option>
+            <option value="mobile_wallet">Mobile Wallet</option>
+            <option value="draft">Draft</option>
+            <option value="bank_transfer">Bank Transfer</option>
+            
+          </select>
+          </div>
+        
+  <div>
+      <label for="first_name" class="block  mb-2 text-sm font-medium text-gray-900 dark:text-white">Delivery Terms</label>
+      <input formControlName="delivery_terms" class="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 w-full p-2.5" type="text" id="first_name"  required>
+  </div>
+
+   <div>
+      <label for="first_name" class="block  mb-2 text-sm font-medium text-gray-900 dark:text-white">Remarks</label>
+      <input formControlName="remarks" class="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 w-full p-2.5" type="text" id="first_name"  required>
+  </div>
+</div>
+      
+  </div>
+
+</div>
+
+<div style="display: flex; justify-content: flex-end;">
+    <button *ngIf="!updatePage" (click)="addToSave()" class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded-full">
+        Save
+    </button>
+    <button *ngIf="updatePage" (click)="addToUpdate()" class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded-full">
+      Update
+  </button>
+</div>
+
+
+
+  </form>
+
+
+
+</div>

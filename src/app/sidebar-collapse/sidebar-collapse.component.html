@@ -1,0 +1,307 @@
+ <!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Browser</title>
+</head>
+
+<body>
+
+   
+  
+
+
+    <div class="min-h-screen flex">
+      <nav class="w-56 flex-none">
+         <div class="wrapper">
+          <div class="sidebar">
+            <img src="https://cdn-icons-png.flaticon.com/512/1571/1571028.png" style="    padding-bottom: 29px;
+            padding-left: 156px;margin-left: -85px;"/>
+            <ul>
+              <li style="cursor: pointer;"><a href="#"><i class="bi bi-box-fill"></i><span style="padding-left: 11px;">DashBoard</span></a></li>
+          
+                <li style="cursor: pointer;" (click)="toggleSalesCollapse()">
+                    <a>
+                     
+                      <i class="bi bi-coin"></i><span style="padding-left: 11px;">Sale</span>
+                    <span><i class="bi bi-caret-down-fill" style=" padding-left: 92px;"></i></span>
+                       
+                    </a>
+                    <ul *ngIf="isSalesCollapsed">
+                      <li (click)="navToQuotation()"><a routerLink="/quotation-add"><i class="bi bi-file-earmark-arrow-up"></i><span style="padding-left: 11px;cursor: pointer;">Quotation</span></a></li>
+                      <li (click)="navToInvoice()"><a routerLink="/invoice-manage"><i class="bi bi-file-earmark-arrow-up"></i><span style="padding-left: 11px;cursor: pointer;">Invoice</span></a></li>
+                      <li><a href="#"><i class="bi bi-file-earmark-arrow-up"></i><span style="padding-left: 11px;cursor: pointer;">Sale Return</span></a></li>
+                      <li><a href="#"><i class="bi bi-file-earmark-arrow-up"></i><span style="padding-left: 11px;cursor: pointer;">Delivery Note</span></a></li>
+                      
+                     
+                    </ul>
+
+
+
+
+
+
+                  </li>
+
+                  <li style="cursor: pointer;" (click)="togglePurchaseCollapse()">
+                    <a>
+                      <i class="bi bi-cart-check-fill"></i><span style="padding-left: 11px;">Purchase</span>
+                      <span><i class="bi bi-caret-down-fill" style="padding-left: 57px;"></i></span>
+                    </a>
+                    <ul *ngIf="ispurchaseCollapsed">
+                      <li style="cursor: pointer;"><a href="#"><i class="bi bi-file-earmark-arrow-up"></i><span style="padding-left: 11px; cursor: pointer;">Order</span></a></li>
+                      <li style="cursor: pointer;"><a href="#"><i class="bi bi-file-earmark-arrow-up"></i><span style="padding-left: 11px;white-space: nowrap;cursor: pointer;">Return</span></a></li>
+                      <li style="cursor: pointer;"><a href="#"><i class="bi bi-file-earmark-arrow-up"></i><span style="padding-left: 11px;cursor: pointer;">Bill</span></a></li>
+                      <li style="cursor: pointer;"><a href="#"><i class="bi bi-file-earmark-arrow-up"></i><span style="padding-left: 11px;cursor: pointer;">Inventory</span></a></li>
+                      <li style="cursor: pointer;"><a href="#"><i class="bi bi-file-earmark-arrow-up"></i><span style="padding-left: 11px;cursor: pointer;">Supplier</span></a></li>
+                      
+                     
+                    </ul>
+                  </li>
+
+                  <li style="cursor: pointer;"><a href="#"><i class="bi bi-cash-coin"></i><span style="padding-left: 11px;">Payments</span></a></li>
+                <li style="cursor: pointer;"><a href="#"><i class="bi bi-person-fill-check"></i><span style="padding-left: 11px;">Customer</span></a></li>
+                <li style="cursor: pointer;"><a href="#"><i class="bi bi-person-fill-check"></i><span style="padding-left: 11px;">Supplier</span></a></li>
+                <li style="cursor: pointer;"><a href="#"><i class="bi bi-people-fill"></i><span style="padding-left: 11px;">Stocks / Products</span></a></li>
+
+                <li style="cursor: pointer;" (click)="toggleMasterCollapse()">
+                  <a>
+                    <i class="bi bi-cart-check-fill"></i><span style="padding-left: 11px;cursor: pointer;">Reports</span>
+                    
+                  </a>
+                  <ul *ngIf="ismasterCollapsed">
+                    <li style="cursor: pointer;"><a href="#"><i class="bi bi-file-earmark-arrow-up"></i><span style="padding-left: 11px; cursor: pointer;">Brand</span></a></li>
+                    <li style="cursor: pointer;"><a href="#"><i class="bi bi-file-earmark-arrow-up"></i><span style="padding-left: 11px;white-space: nowrap;cursor: pointer;">Item</span></a></li>
+                    <li style="cursor: pointer;"><a href="#"><i class="bi bi-file-earmark-arrow-up"></i><span style="padding-left: 11px;cursor: pointer;">Holiday</span></a></li>
+                    <li style="cursor: pointer;"><a href="#"><i class="bi bi-file-earmark-arrow-up"></i><span style="padding-left: 11px;cursor: pointer;">Department</span></a></li>
+                  
+                    
+                   
+                  </ul>
+                </li>
+                
+               
+              
+            </ul>
+
+            
+          </div>
+
+         </div> 
+      </nav>
+
+      <main class="flex-1 min-w-0 overflow-auto bg-indigo-50 mt-4">
+        <div class="mb-20 ">
+          <div class="w-full rounded-lg">
+            
+            </div>
+        </div>
+      </main>
+
+    </div>
+  
+
+   
+
+
+
+   
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  -->
+
+
+  <!-- sidebar -->
+
+
+  <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/tailwind.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css"
+    />
+  </head>
+  <body class="bg-blue-600">
+    
+    <div
+      class="sidebar fixed top-0 bottom-0 lg:left-0 p-2 w-[300px] overflow-y-auto text-center bg-gray-900"
+    >
+      <div class="text-gray-100 text-xl">
+        <div class="p-2.5 mt-1 flex items-center">
+          <i class="bi bi-app-indicator px-2 py-1 rounded-md bg-blue-600"></i>
+          <h1 class="font-bold text-gray-200 text-[15px] ml-3">BILLING SOFTWARE</h1>
+          
+        </div>
+        <div class="my-2 bg-gray-600 h-[1px]"></div>
+      </div>
+      <!-- <div
+        class="p-2.5 flex items-center rounded-md px-4 duration-300 cursor-pointer bg-gray-700 text-white"
+      >
+        <i class="bi bi-search text-sm"></i>
+        <input
+          type="text"
+          placeholder="Search"
+          class="text-[15px] ml-4 w-full bg-transparent focus:outline-none"
+        />
+      </div> -->
+      <div
+        class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
+      >
+      <svg class="h-8 w-8 text-slate-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+      </svg>
+        <span class="text-[15px] ml-4 text-gray-200 font-bold">DASHBOARD</span>
+      </div>
+
+      <!-- CUSTOMER -->
+      <div
+        class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
+        (click)="toggleDropdown()"
+      >
+      <svg class="h-8 w-8 text-slate-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+      </svg>
+      <div class="flex justify-between w-full items-center">
+        <span class="text-[15px] ml-4 text-gray-200 font-bold">CUSTOMER</span>
+    <span class="text-sm" [ngClass]="{'rotate-180': arrowRotated}" id="arrow">
+      <i class="bi bi-chevron-down"></i>
+    </span>
+      </div>
+       
+      </div>
+
+      <div
+  class="text-left text-sm mt-2 w-4/5 mx-auto text-gray-200 font-bold"
+  [ngClass]="{'hidden': !submenuVisible}"
+  id="submenu"
+>
+
+
+  <div class="flex items-center cursor-pointer p-2 hover:bg-blue-600 rounded-md mt-1">
+    <svg class="h-8 w-8 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+    </svg>
+    <h1 class="ml-2">CUSTOMER LIST</h1>
+  </div>
+  
+ 
+</div>
+
+      <!-- SALES -->
+
+      <div
+      class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
+    >  
+    <svg class="h-8 w-8 text-slate-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+    </svg>
+    
+      <span class="text-[15px] ml-4 text-gray-200 font-bold">SALES</span>
+    </div>
+
+    <div
+    class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
+  >  
+  <svg class="h-8 w-8 text-slate-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />  <polyline points="3.27 6.96 12 12.01 20.73 6.96" />  <line x1="12" y1="22.08" x2="12" y2="12" /></svg>
+  
+    <span class="text-[15px] ml-4 text-gray-200 font-bold">PURCHASE</span>
+  </div>
+
+
+  <div
+  class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
+>  
+<svg class="h-8 w-8 text-slate-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M12 10L6 20l-3-5L9 5z" />  <path d="M9 15h12l-3 5h-12" />  <path d="M15 15L9 5h6l6 10z" /></svg>
+
+  <span class="text-[15px] ml-4 text-gray-200 font-bold">STOCKS / PRODUCTS</span>
+</div>
+
+
+
+<div
+  class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
+>  
+<svg class="h-8 w-8 text-slate-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+</svg>
+
+
+  <span class="text-[15px] ml-4 text-gray-200 font-bold">SUPPLIER</span>
+</div>
+
+
+<div
+  class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
+>  
+<svg class="h-8 w-8 text-slate-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M10 13l2.538-.003c2.46 0 4.962-2.497 4.962-4.997 0-3-1.89-5-4.962-5H7c-.5 0-1 .5-1 1L4 18c0 .5.5 1 1 1h2.846L9 14c.089-.564.43-1 1-1zm7.467-5.837C19.204 8.153 20 10 20 12c0 2.467-2.54 4.505-5 4.505h.021-2.629l-.576 3.65a.998.998 0 01-.988.844l-2.712-.002a.5.5 0 01-.494-.578L7.846 19" /></svg>
+
+  <span class="text-[15px] ml-4 text-gray-200 font-bold">PAYMENTS</span>
+</div>
+
+
+<div
+  class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
+>  
+<svg class="h-8 w-8 text-slate-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M14 3v4a1 1 0 0 0 1 1h4" />  <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />  <line x1="9" y1="7" x2="10" y2="7" />  <line x1="9" y1="13" x2="15" y2="13" />  <line x1="13" y1="17" x2="15" y2="17" /></svg>
+
+  <span class="text-[15px] ml-4 text-gray-200 font-bold">REPORTS</span>
+</div>
+
+    
+      
+      <!-- <div
+  class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
+  (click)="toggleDropdown()"
+>
+  <i class="bi bi-chat-left-text-fill"></i>
+  <div class="flex justify-between w-full items-center">
+    <span class="text-[15px] ml-4 text-gray-200 font-bold">Chatbox</span>
+    <span class="text-sm" [ngClass]="{'rotate-180': arrowRotated}" id="arrow">
+      <i class="bi bi-chevron-down"></i>
+    </span>
+  </div>
+</div>
+<div
+  class="text-left text-sm mt-2 w-4/5 mx-auto text-gray-200 font-bold"
+  [ngClass]="{'hidden': !submenuVisible}"
+  id="submenu"
+>
+  <h1 class="cursor-pointer p-2 hover:bg-blue-600 rounded-md mt-1">
+    Social
+  </h1>
+  <h1 class="cursor-pointer p-2 hover:bg-blue-600 rounded-md mt-1">
+    Personal
+  </h1>
+  <h1 class="cursor-pointer p-2 hover:bg-blue-600 rounded-md mt-1">
+    Friends
+  </h1>
+</div> -->
+     
+    </div>
+
+    
+  </body>
+</html>

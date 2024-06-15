@@ -1,0 +1,84 @@
+body {
+    background:#333333;
+    color:beige;
+    margin: 0;
+    padding: 0;
+  }
+  
+   table {
+              width: 100%;
+              border-collapse: collapse;border-collapse: collapse; /*Entfernt die Standardabstände zwischen den Tabellenzellen */
+          }
+          thead {
+              background:rgb(84 102 110 / 43%);
+          }
+          th, td {
+              padding: 8px;
+              text-align: left;
+              border: 1px solid #d6d6d6;
+          }
+  
+          @media (max-width: 1440px) {
+              /* Stil für Bildschirme bis 1440px */
+              th, td {
+                  font-size: 1.1em;
+              }
+          }
+  
+          @media (max-width: 1280px) {
+              /* Stil für Bildschirme bis 1280px */
+              th, td {
+                  font-size: 1.1em;
+              }
+          }
+  
+          @media (max-width: 1024px) {
+              /* Stil für Bildschirme bis 1024px */
+              th, td {
+                  font-size: 1.0em;
+              }
+          }
+  
+          @media (max-width: 768px) {
+              /* Stil für Bildschirme bis 768px */
+              table, thead, tbody, th, td, tr {
+                  display: block; /* Stellt alle Tabellenelemente auf block um, wodurch sie wie div-Elemente angezeigt werden */
+              }
+              thead tr {
+                  display: none; /* Blendet die Kopfzeile der Tabelle aus */
+              }
+              tr {
+                  margin-bottom: 10px;
+              }
+              td {
+                  text-align: right;
+                  position: relative;
+                  padding-left: 50%;
+              }
+              td::before {
+                content: attr(data-label); /* Fügt den Inhalt des data-label-Attributs vor dem Text der Zelle ein */
+                position: absolute; /* Positioniert das ::before-Element absolut innerhalb der Zelle */
+                left: 0; /* Setzt das ::before-Element an den linken Rand der Zelle */
+                width: 50%; /* Weist dem ::before-Element eine Breite von 50% zu */
+                padding-left: 1.15em; /* Fügt dem ::before-Element einen linken Innenabstand hinzu */
+                font-weight: bold; /* Macht den Text des ::before-Elements fett */
+                text-align: left; /* Richtet den Text des ::before-Elements linksbündig aus */
+                background:red;  /* Hintergrundfarbe der Pseudoelemente (ehemalige Überschriften) */
+                width:100px;
+            }
+          }
+  
+          @media (max-width: 480px) {
+              /* Stil für Bildschirme bis 480px */
+              td {
+                  font-size: 1.2em;
+  
+              }
+          }
+          @media (max-width: 480px) {
+              /* Stil für Bildschirme bis 480px */
+              th {
+                  color: red;
+                  font-size: 1.2em;
+              }
+          }
