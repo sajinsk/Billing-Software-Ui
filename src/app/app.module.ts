@@ -9,7 +9,9 @@ import { SidebarCollapseComponent } from './sidebar-collapse/sidebar-collapse.co
 import { InvoiceAddComponent } from './sales/invoice-add/invoice-add.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { InvoiceManageComponent } from './sales/invoice-manage/invoice-manage.component';
-import { QuotationAddComponent } from './sales/quotation-add/quotation-add.component';
+import { CustomerAddComponent } from './customer/customer-add/customer-add.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 
@@ -25,7 +27,8 @@ const routes: Routes = [
     SidebarCollapseComponent,
     InvoiceAddComponent,
     InvoiceManageComponent,
-    QuotationAddComponent,
+    CustomerAddComponent,
+    
     
 
   ],
@@ -35,7 +38,8 @@ const routes: Routes = [
     FormsModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

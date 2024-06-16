@@ -12,10 +12,10 @@ export class SidebarCollapseComponent implements OnInit {
 //   isSalesCollapsed: boolean = false;
 //   ispurchaseCollapsed: boolean = false;
 //   ismasterCollapsed:boolean = false;
-  
-//   constructor(private route:Router) {
+
+  constructor(private router:Router) {
     
-//   }
+  }
   ngOnInit(): void {
     
   }
@@ -48,6 +48,12 @@ arrowRotated = false;
 toggleDropdown() {
   this.submenuVisible = !this.submenuVisible;
   this.arrowRotated = !this.arrowRotated;
+}
+
+navigateToCustomerPage():void{
+  console.log('hi');
+  
+  this.router.navigate(['customer-add']);
 }
 }
 
