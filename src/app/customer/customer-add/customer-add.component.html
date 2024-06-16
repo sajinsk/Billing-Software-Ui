@@ -29,7 +29,7 @@
                 </nav>
 
                 <div style="display: flex; justify-content: flex-end;margin-bottom: 23px;">
-                    <button  class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded-full">
+                    <button (click)="moveToManage()" class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded-full">
                       Move To Manage
                     </button>
                   </div>
@@ -45,10 +45,19 @@
 </div>
 
 <div class="mt-15 mb-20 grid grid-cols-3 gap-x-8 gap-y-4 p-4" style="margin-top: -41px;">
+
+   
+
+
     <div style="margin-left: 26px;">
-        <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" style="margin-left: 10px;">Customer ID</label>
-        <input formControlName="customer_id" class="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 w-full p-2.5 custom-input" type="text" id="first_name" required>
+        <label for="customer_id" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" style="margin-left: 10px;">Customer Type</label>
+        <select formControlName="customer_type" class="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 w-full p-2.5 custom-input" id="customer_id" required>
+            <option value="general">General</option>
+            <br>
+            <option value="regular">Regular</option>
+        </select>
     </div>
+    
 
     
       <div style="margin-left: 26px;">

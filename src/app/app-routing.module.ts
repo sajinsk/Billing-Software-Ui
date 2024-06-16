@@ -4,6 +4,7 @@ import { SidebarCollapseComponent } from './sidebar-collapse/sidebar-collapse.co
 import { InvoiceAddComponent } from './sales/invoice-add/invoice-add.component';
 import { InvoiceManageComponent } from './sales/invoice-manage/invoice-manage.component';
 import { CustomerAddComponent } from './customer/customer-add/customer-add.component';
+import { CustomerManageComponent } from './customer/customer-manage/customer-manage.component';
 
 
 const routes: Routes = [
@@ -26,7 +27,16 @@ const routes: Routes = [
   {
     path:"customer-add",
     component:CustomerAddComponent
-  }
+  },
+  {
+    path:"customer-manage",
+    component:CustomerManageComponent
+  },
+
+  {
+    path:'customer-add/:id',
+    component: CustomerAddComponent
+  },
 
  
 ];

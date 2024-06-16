@@ -53,7 +53,7 @@ toggleDropdown() {
 navigateToCustomerPage():void{
   console.log('hi');
   
-  this.router.navigate(['customer-add']);
+  this.router.navigate(['customer-manage']);
 }
 }
 

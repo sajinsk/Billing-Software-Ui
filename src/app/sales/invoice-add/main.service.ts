@@ -73,4 +73,18 @@ saveCustomerDetails(data: any):Observable<any>{
   return this.http.post('http://localhost:3000/sales-invoice/customer-save',data)
  }
 
+
+ updateCustomerDetails(data: any):Observable<any>{
+  return this.http.post('http://localhost:3000/sales-invoice/customer-update',data)
+ }
+
+ getCustomerId(id:any){
+    
+  return this.http.get('http://localhost:3000/sales-invoice/getCustomerid/'+id)
+}
+
+
+getCustomerList():Observable<any>{
+  return this.http.get('http://localhost:3000/sales-invoice/getCustomer')
+}
 }

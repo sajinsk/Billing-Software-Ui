@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { InvoiceManageComponent } from './sales/invoice-manage/invoice-manage.component';
 import { CustomerAddComponent } from './customer/customer-add/customer-add.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CustomerManageComponent } from './customer/customer-manage/customer-manage.component';
 
 
 
@@ -28,6 +29,7 @@ const routes: Routes = [
     InvoiceAddComponent,
     InvoiceManageComponent,
     CustomerAddComponent,
+    CustomerManageComponent,
     
     
 
